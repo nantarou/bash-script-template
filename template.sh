@@ -23,7 +23,6 @@ Usage: ${SCRIPT_NAME} [options]... [args]...
 
 Args:
 	XXX		[XXX]の説明
-
 Options:
 	-h, --help		ヘルプ表示
 	-v, --version	バージョン表示
@@ -59,7 +58,7 @@ function check_command_exist
 	local not_exist=()
 	for cmd in ${REQUIRED_CMD[@]}; do
 		local path=$(get_cmd_path $cmd)
-		if [ -n "$[path]"]; then
+		if [ -n "$[path]" ]; then
 			local key=$(basename ${cmd} | sed -re 's/\..*$//')
 			CMDS["${key}"]="${path}"
 		else
@@ -114,7 +113,7 @@ do
 done
 
 # 必要コマンドの確認
-check_command
+check_command_exist
 
 # 引数の数をチェック
 if [ ${#args[@]} -ne ${ARGS_NUM} ]; then
