@@ -35,7 +35,7 @@ EOF
 # version出力
 function version
 {
-	echo "${SCRIPT_NAME} ${VER_MAJOR}.${VER_MINOR}.${VER_BUILD}"
+	echo "${VER_MAJOR}.${VER_MINOR}.${VER_BUILD}"
 }
 
 # コマンドのパスを返す
