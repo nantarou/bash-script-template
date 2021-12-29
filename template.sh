@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 SCRIPT_NAME=$(basename $0)
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
@@ -122,5 +122,6 @@ if [ ${#args[@]} -ne ${ARGS_NUM} ]; then
 fi
 
 ## -- メイン処理 --
+echo $args
 
 exit 0
